@@ -1,6 +1,9 @@
 import { useRouter } from 'next/router'
 import React from 'react'
 
+
+//* SSG Page
+
 function User({ user }) {
     const router = useRouter();
 
@@ -49,7 +52,7 @@ export async function getStaticProps(context) {
         props: {
             user: data || []
         },
-        revalidate: 10
+        revalidate: 10  //? ISR PAGE
 
     }
 }

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import React from 'react'
 
+
+//* SSR Page
 function Post({ data }) {
     console.log(data)
     return (

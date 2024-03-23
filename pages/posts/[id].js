@@ -25,6 +25,7 @@ export async function getServerSideProps(context) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
   const data = await res.json();
 
+  //? Two way for Error Handling 
   //? NotFound Page
   // if (res.status != 200)
   //   return {
@@ -37,7 +38,6 @@ export async function getServerSideProps(context) {
       redirect: { destination: "/" }
     }
   }
-
 
   return {
     props: { post: data },
