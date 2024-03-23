@@ -26,10 +26,10 @@ export async function getServerSideProps(context) {
   const data = await res.json();
 
   //? NotFound Page
-  if (res.status != 200)
-    return {
-      notFound: true
-    }
+  // if (res.status != 200)
+  //   return {
+  //     notFound: true
+  //   }
 
   //? Redirect Page
   if (!Object.keys(data).length) {
